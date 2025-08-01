@@ -88,6 +88,11 @@ export default function PageSolicitacoes({ params }: Props) {
           minW={0} // Permite que o flex item encolha
         >
           <FormSolicitacaoEdit id={+id} data={data} />
+          {user?.hierarquia === "ADM" && (
+            <Box mt={{ base: 6, md: 8 }} w="full">
+              <LogsComponent logs={Logs} />
+            </Box>
+          )}
         </Box>
 
         {/* Seção lateral - Chat e Alertas */}
@@ -135,15 +140,12 @@ export default function PageSolicitacoes({ params }: Props) {
           >
             <ListAlertas id={+id} />
           </Box>
+
         </Flex>
       </Flex>
 
       {/* Logs - Sempre em uma nova linha */}
-      {user?.hierarquia === "ADM" && (
-        <Box mt={{ base: 6, md: 8 }} w="full">
-          <LogsComponent logs={Logs} />
-        </Box>
-      )}
+
     </Container>
   );
 }

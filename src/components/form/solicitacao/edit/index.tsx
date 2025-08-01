@@ -533,22 +533,20 @@ export default function FormSolicitacaoEdit({
               />
             )}
           </Flex>
-          <Box>
-            <Flex
-              border="1px"
-              borderColor="blue.200"
-              bg="blue.50"
-              p={3}
-              borderRadius="md"
-              align="center"
-              gap={2}
-            >
-              <Icon as={AiOutlineInfoCircle} color="blue.500" boxSize={5} />
-              <Text color="blue.700" fontSize="sm">
-                Os processos com CNH anexada terão prioridade no atendimento
-              </Text>
-            </Flex>
-          </Box>
+          {/* <Flex
+            border="1px"
+            borderColor="blue.200"
+            bg="blue.50"
+            p={3}
+            borderRadius="md"
+            align="center"
+            gap={2}
+          >
+            <Icon as={AiOutlineInfoCircle} color="blue.500" boxSize={5} />
+            <Text color="blue.700" fontSize="sm">
+              Os processos com CNH anexada terão prioridade no atendimento
+            </Text>
+          </Flex> */}
 
           {/* <Flex gap={6}>
           <InputFileUpload
